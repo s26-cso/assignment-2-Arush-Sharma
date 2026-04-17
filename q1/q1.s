@@ -41,6 +41,7 @@ make_node:
 insert:
     bnez a0, insert_not_null # If root is not NULL, continue
     # If root is NULL, make a new node and return it
+    mv a0, a1
     j make_node              # Tail call to make_node
 
 insert_not_null:
